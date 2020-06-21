@@ -1,0 +1,38 @@
+.alert-container {
+  color: $white;
+  position: fixed;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: $primary;
+  padding: 1rem;
+  width: 30rem;
+  border-radius: $border-radius-lg;
+  font-weight: $font-weight-bold;
+  vertical-align: middle;
+  .alert-title {
+    font-size: $h2-font-size;
+  }
+  .alert-detail {
+    font-size: $font-size-lg;
+  }
+  .alert-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+  }
+  &.alert-success {
+    background-color: $success;
+  }
+  &.alert-default {
+    background-color: $primary;
+  }
+  &.alert-danger {
+    background-color: $danger;
+  }
+  &.alert-warning {
+    background-color: $warning;
+  }
+}
