@@ -7,6 +7,7 @@ describe('test Alert component',() => {
     const warpper = render(<Alert title={'hello'} alertType={'success'}></Alert>)
     const element = warpper.getByText('hello')
     expect(element).toBeInTheDocument()
+    expect(element.parentElement).toHaveClass('alert-success')
     // expect(element?.getAttribute('alertType')).toEqual('success')
   })
 })

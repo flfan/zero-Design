@@ -1,11 +1,36 @@
 import React from 'react';
 import Button, {ButtonType,ButtonSize} from './components/Button/button'
 import Alert from './components/Alert/alert'
+import Menu from './components/Menu/menu'
+import MenuItem from './components/Menu/menuItem'
+import SubMenu from './components/Menu/subMenu'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Menu defaultIndex='0' onSelect={(index) => {alert(index)} }>
+          <MenuItem>item1</MenuItem>
+          <MenuItem disabled>item2</MenuItem>
+          <SubMenu title={"submenu"}>
+            <MenuItem>item3</MenuItem>
+            <MenuItem>item4</MenuItem>
+          </SubMenu>
+          <MenuItem>item2</MenuItem>
+          <MenuItem >item2</MenuItem>
+        </Menu>
+        <Menu mode={'vertical'} defaultOpenSubMenus={['2']} defaultIndex='0' onSelect={(index) => {alert(index)} }>
+          <MenuItem>item1</MenuItem>
+          <MenuItem disabled>item2</MenuItem>
+          <SubMenu title={"submenu"}>
+            <MenuItem>item3</MenuItem>
+            <MenuItem>item4</MenuItem>
+            <MenuItem>item4</MenuItem>
+            <MenuItem>item4</MenuItem>
+          </SubMenu>
+          <MenuItem>item4</MenuItem>
+          <MenuItem>item4</MenuItem>
+        </Menu>
         <Button onClick={e => console.log(e.clientX)}>Hello</Button>
         <Button btnType={ButtonType.Danger} size={ButtonSize.large}>large Danger</Button>
         <Button btnType={ButtonType.Primary} size={ButtonSize.Small}>Small Primary</Button>
