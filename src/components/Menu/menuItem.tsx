@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {FC,useContext} from 'react'
 import classNames from 'classnames'
 
 import {MenuContext} from './menu'
@@ -10,7 +10,7 @@ export interface MenuItemProps {
   disabled ?: boolean
 }
 
-const MenuItem: React.FC<MenuItemProps> = (props) => {
+const MenuItem: FC<MenuItemProps> = (props) => {
   const {children, index, style, className, disabled} = props
   const context = useContext(MenuContext)
   const classes = classNames('menu-item', className, {
@@ -37,4 +37,4 @@ MenuItem.defaultProps = {
 
 MenuItem.displayName = 'MenuItem'
 
-export default MenuItem
+export default MenuItem;
