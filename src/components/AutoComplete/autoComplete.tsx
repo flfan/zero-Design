@@ -109,7 +109,7 @@ export const AutoComplete: FC<AutoCompleteProps> = (props) => {
         timeout={300}
         onExited={() => {setSugestions([])}}
       >
-        <ul className="viking-suggestion-list">
+        <ul className="zero-suggestion-list">
           { loading &&
             <div className="suggstions-loading-icon">
               <Icon icon="spinner" spin/>
@@ -130,7 +130,7 @@ export const AutoComplete: FC<AutoCompleteProps> = (props) => {
     )
   }
   return (
-    <div className="viking-auto-complete" ref={componentRef}>
+    <div className="zero-auto-complete" ref={componentRef}>
       <Input
         value={inputValue}
         onChange={handleChange}
